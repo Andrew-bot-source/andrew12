@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MUST Lecturer System - View Lecturers</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body class="bg-gradient-to-br from-white to-blue-100 text-gray-800">
+       <header class="bg-gradient-to-r from-deep-teal to-coral-pink text-white p-6 text-center shadow-lg">
+    <img src="/images/logo.png" alt="MUST Logo" class="mx-auto w-32 logo">
+    <h1 class="text-4xl font-bold mt-4">MUST Lecturer System</h1>
+</header>
+        <nav class="bg-slate-800 p-4 flex justify-center gap-6">
+            <a href="index.html" class="text-white text-lg px-4 py-2 rounded hover:bg-cyan-500 transition">Home</a>
+            <a href="view-lecturers.html" class="text-white text-lg px-4 py-2 rounded bg-cyan-500">View Lecturers</a>
+            <a href="add-lecturer.html" class="text-white text-lg px-4 py-2 rounded hover:bg-cyan-500 transition">Add Lecturer</a>
+            <a href="index.html#feedback" class="text-white text-lg px-4 py-2 rounded hover:bg-cyan-500 transition">Feedback</a>
+        </nav>
+
+        <div class="container max-w-6xl mx-auto p-6">
+            <div id="view-lecturers" class="bg-white p-8 rounded-lg shadow-md animate-fadeIn">
+                <h2 class="text-3xl font-semibold text-indigo-900 mb-4">Lecturers Available</h2>
+                <p class="text-gray-600 mb-6">Browse through the list of lecturers, view their profiles, and contact them directly.</p>
+                <div id="lecturerContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+            </div>
+
+            <div id="schedule" class="mt-8 bg-blue-50 p-8 rounded-lg shadow-md animate-fadeIn">
+                <h2 class="text-3xl font-semibold text-indigo-900 mb-4">Lecturer Schedule</h2>
+                <p class="text-gray-600 mb-6">View lecturers' availability in a weekly schedule.</p>
+                <table class="schedule-table w-full">
+                    <thead>
+                        <tr class="bg-indigo-900 text-white">
+                            <th>Lecturer</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer class="bg-gradient-to-r from-indigo-900 to-cyan-500 text-white p-6 text-center">
+            <p class="text-lg">MUST Lecturer System - Bridging Minds, Building Futures</p>
+            <p class="mt-2">Developed by Andrew-Bot</p>
+        </footer>
+
+        <script src="/js/script.js"></script>
+    </body>
+    </html>

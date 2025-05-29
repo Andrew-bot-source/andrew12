@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUST Lecturer System - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-white to-blue-100 text-gray-800">
+    <header class="bg-gradient-to-r from-deep-teal to-coral-pink text-white p-6 text-center shadow-lg">
+    <img src="/images/logo.png" alt="MUST Logo" class="mx-auto w-32 logo">
+    <h1 class="text-4xl font-bold mt-4">MUST Lecturer System</h1>
+</header>
+    <nav class="bg-slate-800 p-4 flex justify-center gap-6">
+        <a href="index.html" class="text-white text-lg px-4 py-2 rounded bg-cyan-500">Home</a>
+        <a href="view-lecturers.html" class="text-white text-lg px-4 py-2 rounded hover:bg-cyan-500 transition">View Lecturers</a>
+        <a href="add-lecturer.html" class="text-white text-lg px-4 py-2 rounded hover:bg-cyan-500 transition">Add Lecturer</a>
+        <a href="#feedback" class="text-white text-lg px-4 py-2 rounded hover:bg-cyan-500 transition">Feedback</a>
+    </nav>
+
+    <div class="container max-w-6xl mx-auto p-6">
+        <div id="home" class="bg-white p-8 rounded-lg shadow-md animate-fadeIn">
+            <h2 class="text-3xl font-semibold text-indigo-900 mb-4">Welcome to MUST Lecturer System</h2>
+            <p class="text-gray-600 mb-6">Connect with lecturers effortlessly to enhance your academic journey!</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="card bg-cyan-500 text-white p-6 rounded-lg cursor-pointer" onclick="window.location.href='view-lecturers.html'">
+                    <h3 class="text-xl font-bold">Lecturers Available</h3>
+                    <p>Explore profiles and contact details of available lecturers.</p>
+                </div>
+                <div class="card bg-purple-500 text-white p-6 rounded-lg cursor-pointer" onclick="window.location.href='add-lecturer.html'">
+                    <h3 class="text-xl font-bold">Add New Lecturer</h3>
+                    <p>Add a lecturer's details to the system.</p>
+                </div>
+                <div class="card bg-blue-500 text-white p-6 rounded-lg cursor-pointer" onclick="window.location.href='#feedback'">
+                    <h3 class="text-xl font-bold">Submit Feedback</h3>
+                    <p>Share your feedback about lecturers.</p>
+                </div>
+            </div>
+
+            <div class="search-section bg-blue-50 p-6 mt-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-indigo-900 mb-4">Search Lecturers</h3>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="text" id="searchInput" placeholder="Search by name..." class="p-3 border-2 border-indigo-900 rounded-lg w-full">
+                    <select id="departmentFilter" class="p-3 border-2 border-indigo-900 rounded-lg">
+                        <option value="">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Mathematics">Mathematics</option>
+                    </select>
+                    <select id="specializationFilter" class="p-3 border-2 border-indigo-900 rounded-lg">
+                        <option value="">All Specializations</option>
+                        <option value="AI">AI</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Calculus">Calculus</option>
+                    </select>
+                    <button onclick="searchLecturers()" class="bg-indigo-900 text-white p-3 rounded-lg hover:bg-cyan-500">Search</button>
+                </div>
+                <div id="searchResults" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4"></div>
+            </div>
+        </div>
+
+        <div id="feedback" class="mt-8 bg-blue-50 p-8 rounded-lg">
+            <h2 class="text-3xl font-semibold text-indigo-900 mb-4">Submit Feedback</h2>
+            <p class="text-gray-600 mb-6">Share your thoughts to improve lecturer-student interactions.</p>
+            <form id="feedbackForm" class="space-y-4">
+                <input type="text" id="feedbackName" placeholder="Your Name" required class="w-full p-3 border-2 border-cyan-500 rounded-lg">
+                <input type="email" id="feedbackEmail" placeholder="Your Email" required class="w-full p-3 border-2 border-cyan-500 rounded-lg">
+                <select id="lecturerSelect" required class="w-full p-3 border-2 border-cyan-500 rounded-lg">
+                    <option value="">Select Lecturer</option>
+                </select>
+                <textarea id="feedbackMessage" placeholder="Your Feedback" required class="w-full p-3 border-2 border-cyan-500 rounded-lg"></textarea>
+                <button type="submit" class="bg-indigo-900 text-white p-3 rounded-lg hover:bg-cyan-500">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-gradient-to-r from-indigo-900 to-cyan-500 text-white p-6 text-center">
+        <p class="text-lg">MUST Lecturer System - Bridging Minds, Building Futures</p>
+        <p class="mt-2">Developed by Andrew-Bot</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
