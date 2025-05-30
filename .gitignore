@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# MySQL/XAMPP files
+*.sql
+mysql_data/
+
+# Windows-specific files
+Thumbs.db
+desktop.ini
+
+# macOS-specific files
+.DS_Store
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# Build artifacts
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
